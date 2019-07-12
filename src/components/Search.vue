@@ -1,15 +1,21 @@
 <template>
   <div>
-    <pm-notification v-show="showNotification">
-      <p slot="body">No se encontraron resultados</p>
-    </pm-notification>
-    <pm-loader v-show="isLoading"></pm-loader>
+    <transition name="move">
+      <pm-notification v-show="showNotification">
+        <p slot="body">No se encontraron resultados</p>
+      </pm-notification>
+    </transition>
+    <transition name="move">
+      <pm-loader v-show="isLoading"></pm-loader>
+    </transition>
     <section v-show="!isLoading" class="section">
       <nav class="nav">
         <div class="container">
           <input type="text" class="input is-large" placeholder="Buscar Canciones" v-model="searchQuery" @keyup.enter="search">
-          <button class="button is-info is-large" @click="search">Buscar</button>
-          <button class="button is-danger is-large">&times;</button>
+          <div class="pwd-2">
+            <button class="button pwd-1 is-large" @click="search">Buscar</button>
+            <button class="button is-dark is-large">&times;</button>
+          </div>
         </div>
       </nav>
 
@@ -94,4 +100,16 @@
     border:3px #23d160 solid;
   }
 
+  .pwd-1{
+    background-color:red;
+    color:#fff;
+  }
+
+  .pwd-2{
+    margin:10px;
+  }
+
+  .section{
+    background-color: #8e1616;
+  }
 </style>
