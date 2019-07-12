@@ -7,7 +7,7 @@
     <section v-show="!isLoading" class="section">
       <nav class="nav">
         <div class="container">
-          <input type="text" class="input is-large" placeholder="Buscar Canciones" v-model="searchQuery">
+          <input type="text" class="input is-large" placeholder="Buscar Canciones" v-model="searchQuery" @keyup.enter="search">
           <button class="button is-info is-large" @click="search">Buscar</button>
           <button class="button is-danger is-large">&times;</button>
         </div>
@@ -15,7 +15,7 @@
 
       <div class="container">
         <p>
-          <div v-text="searchMessage" style="margin-top:70px"></div>
+          <span v-text="searchMessage" style="margin-top:70px"></span>
         </p>
       </div>
 

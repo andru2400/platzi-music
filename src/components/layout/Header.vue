@@ -7,6 +7,8 @@
             <div class="nav-left">
               <div class="nav-item">
                 <strong>Platzi Music</strong>
+                <!-- <router-link to="/" class="nav-item">Buscar</router-link>
+                <router-link to="about" class="nav-item">Nosotros</router-link> -->
               </div>
             </div>
             <div class="nav-right nav-menu">
@@ -15,6 +17,7 @@
           </div>
         </header>
       </div>
+
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title">Platzi Music</h1>
